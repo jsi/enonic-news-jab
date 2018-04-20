@@ -1,11 +1,14 @@
 body{
-    font-family: 'Droid Serif', serif;
+    font-family: 'IM Fell DW Pica', serif;
     font-size: 14px;
-    color: #2f2f2f;
+    color: #333322;
     background-color: #f9f7f1;
+    background-image: url('../images/pagebackground.jpg');
+    background-repeat: repeat-y;
+    background-size: contain;
 }
 header{
-    font-family: 'Playfair Display', serif;
+    font-family: 'IM Fell DW Pica SC', serif;
     font-weight: 900;
     font-size: 80px;
     text-transform: uppercase;
@@ -33,6 +36,7 @@ p{
     border-bottom: 2px solid #2f2f2f;
     border-top: 2px solid #2f2f2f;
     padding: 12px 0 12px 0;
+    margin: 0 2%;
 
 }
 .weatherforcastbox{
@@ -74,7 +78,7 @@ p{
 .collumn .headline{
     text-align: center;
     line-height: normal;
-    font-family: 'Playfair Display', serif;
+    font-family: 'IM Fell DW Pica SC', serif;
     display: block;
     margin: 0 auto;
 
@@ -202,7 +206,7 @@ p{
     padding: 10px 0 10px 0;
 }
 .collumn .citation{
-    font-family: 'Playfair Display', serif;
+    font-family: 'IM Fell DW Pica SC', serif;
     font-size: 36px;
     line-height: 44px;
     /*font-style: italic;*/
