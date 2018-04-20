@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<content-type>
+	<display-name>Article</display-name>
+	<super-type>base:structured</super-type>
+	<allow-child-content>true</allow-child-content>
+	<form>
+		<field-set name="basic">
+			<label>Article</label>
+			<items>
+				<input type="TextArea" name="preface">
+					<label>Article preface</label>
+					<occurrences minimum="0" maximum="1"/>
+				</input>
+				<input type="HtmlArea" name="article">
+					<label>Article text</label>
+					<occurrences minimum="1" maximum="1"/>
+				</input>
+				<input type="ContentSelector" name="category">
+					<label>Category</label>
+					<occurrences minimum="0" maximum="0"/>
+					<config>
+						<relationship-type>system:reference</relationship-type>
+						<allow-content-type>category</allow-content-type>
+						<allowPath>${site}/categories/</allowPath>
+					</config>
+				</input>
+				<input type="Tag" name="tags">
+					<label>Tags</label>
+					<occurrences minimum="0" maximum="0"/>
+				</input>
+				<input type="ImageSelector" name="featuredImage">
+					<label>Featured Image</label>
+					<occurrences minimum="0" maximum="1"/>
+					<config>
+						<allowPath>${site}/*</allowPath>
+					</config>
+				</input>
+				<input type="ContentSelector" name="author">
+					<label>Author</label>
+					<occurrences minimum="0" maximum="1"/>
+					<config>
+						<relationship-type>system:reference</relationship-type>
+						<allow-content-type>author</allow-content-type>
+						<allowPath>${site}/authors/</allowPath>
+					</config>
+				</input>
+				<input type="DateTime" name="datePublished">
+					<label>Publish date</label>
+					<occurrences minimum="1" maximum="1"/>
+					<default>now</default>
+				</input>
+			</items>
+		</field-set>
+		<field-set name="settings">
+			<label>Settings</label>
+			<items>
+				<input type="Checkbox" name="hideOnFrontpage">
+					<label>Hide from frontpage?</label>
+					<occurrences minimum="0" maximum="1"/>
+				</input>
+				<input type="Checkbox" name="stickyArticle">
+					<label>Sticky article?</label>
+					<help-text>This will pin the article to the top of the frontpage</help-text>
+					<occurrences minimum="0" maximum="1"/>
+				</input>
+				<input type="Checkbox" name="slideshow">
+					<label>Use in slideshow?</label>
+					<help-text>This will use the article header and title in a big banner on the frontpage. Protip: use an SVG as header image for best result.</help-text>
+					<occurrences minimum="0" maximum="1"/>
+				</input>
+			</items>
+		</field-set>
+	</form>
+	<x-data mixin="menu-item"/>
+</content-type>
+
