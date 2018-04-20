@@ -15,7 +15,7 @@ exports.get = function (req) {
     var view = resolve('article.html');
 
     var body = thymeleaf.render(view, {
-        article: content.data
+        article: content
     });
 
     return {
