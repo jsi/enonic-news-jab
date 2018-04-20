@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<part>
+  <display-name>Article</display-name>
+  <config>
+    <input type="ContentSelector" name="articleContent">
+      <label>Article Content</label>
+      <occurrences minimum="1" maximum="1"/>
+      <config>
+        <relationshipType>system:reference</relationshipType>
+        <allowContentType>article</allowContentType>
+      </config>
+    </input>
+  </config>
+</part>
