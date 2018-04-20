@@ -1,5 +1,6 @@
 <html>
 <head>
+    <meta charset="utf-8">
     <!--link href='https://fonts.googleapis.com/css?family=Playfair+Display:400,700,900,400italic,700italic,900italic|Droid+Serif:400,700,400italic,700italic' rel='stylesheet' type='text/css'-->
     <link href="https://fonts.googleapis.com/css?family=IM+Fell+DW+Pica|IM+Fell+DW+Pica+SC" rel="stylesheet">
     <link rel="stylesheet" data-th-href="${portal.assetUrl({'_path=css/jldif.css'})}">
@@ -10,7 +11,7 @@
 <body>
 <div class="head">
     <div class="headerobjectswrapper">
-        <div class="weatherforcastbox"><span style="font-style: italic;">Weatherforcast for the next 24 hours: Plenty of Sunshine</span><br><span>Wind: 7km/h SSE; Ther: 21°C; Hum: 82%</span></div>
+        <div class="weatherforcastbox"><span style="font-style: italic;">Weatherforcast for the next 24 hours: <span data-th-text="${weatherDesc}">Plenty of Sunshine</span></span><br><span>Wind: <span data-th-text="${weatherWind}">7km/h SSE</span>; Ther: <span data-th-text="${weatherTemp}">21°C</span>; Hum: <span data-th-text="${weatherHum}">82%</span></span></div>
         <header>Enonic News JAB</header>
     </div>
 

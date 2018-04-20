@@ -22,7 +22,7 @@ exports.translate = function (text, language) {
 
     var key = language + '|' + text;
 
-    var translation = cache.get(key, function () {
+    var translation = translationCache.get(key, function () {
         return doTranslate(text, url);
     });
 
@@ -30,9 +30,6 @@ exports.translate = function (text, language) {
 };
 
 var doTranslate = function (text, url) {
-    var params = {
-        text: text
-    };
     var response = httpClient.request({
         url: url,
         method: 'POST',
