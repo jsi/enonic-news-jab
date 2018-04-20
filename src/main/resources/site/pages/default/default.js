@@ -20,6 +20,7 @@ exports.get = function (req) {
         weatherWind: formatWind(weatherData.wind),
         weatherTemp: formatTemp(weatherData),
         weatherHum: formatHumidity(weatherData),
+        newsDate: getNewsDate(),
         content: content,
         mainRegion: mainRegion
     });
@@ -28,6 +29,13 @@ exports.get = function (req) {
     return {
         body: body
     }
+};
+
+var getNewsDate = function () {
+    var days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+    var months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
+    var now = new Date();
+    return days[now.getDay()] + ' ' + months[now.getMonth()] + ' ' + now.getDate() + ', ' + now  .getFullYear();
 };
 
 var formatWind = function (wind) {
