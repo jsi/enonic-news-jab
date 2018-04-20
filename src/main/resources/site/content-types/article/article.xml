@@ -35,14 +35,9 @@
 						<allowPath>${site}/*</allowPath>
 					</config>
 				</input>
-				<input type="ContentSelector" name="author">
+				<input type="TextLine" name="author">
 					<label>Author</label>
 					<occurrences minimum="0" maximum="1"/>
-					<config>
-						<relationship-type>system:reference</relationship-type>
-						<allow-content-type>author</allow-content-type>
-						<allowPath>${site}/authors/</allowPath>
-					</config>
 				</input>
 				<input type="DateTime" name="datePublished">
 					<label>Publish date</label>
