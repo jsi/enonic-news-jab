@@ -1,0 +1,12 @@
+<div class="column">
+    <div data-th-each="event : ${data}" data-th-remove="tag">
+        <div class="head">
+            <span class="headline hl3" data-th-text="${event.title}">Training</span>
+            <p><span class="headline hl4" data-th-text="${event.date}"></span></p>
+        </div>
+
+        <div data-th-text="${event.address}">
+
+        </div>
+    </div>
+</div>
