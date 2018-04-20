@@ -5,7 +5,7 @@ body{
     background-color: #f9f7f1;
     background-image: url('../images/pagebackground.jpg');
     background-repeat: repeat-y;
-    background-size: contain;
+    background-size: 100%;
 }
 header{
     font-family: 'IM Fell DW Pica SC', serif;

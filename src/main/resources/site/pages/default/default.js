@@ -1,9 +1,15 @@
 var thymeleaf = require('/lib/xp/thymeleaf'); // Import the thymeleaf library
+var portal = require('/lib/xp/portal');
 var weatherLib = require('/lib/weather');
 
 // Handle the GET request
 exports.get = function (req) {
+    var content = portal.getContent();
     var weatherData = weatherLib.getWeatherForecast();
+    // Extract the main region which contains component parts
+    var mainRegion = content.page.regions.main;
+
+    log.info(JSON.stringify(content, null, 4));
 
     // Specify the view file to use
     var view = resolve('default.html');
@@ -13,7 +19,9 @@ exports.get = function (req) {
         weatherDesc: weatherData.text,
         weatherWind: formatWind(weatherData.wind),
         weatherTemp: formatTemp(weatherData),
-        weatherHum: formatHumidity(weatherData)
+        weatherHum: formatHumidity(weatherData),
+        content: content,
+        mainRegion: mainRegion
     });
 
     // Return the response object

@@ -1,0 +1,7 @@
+<div>
+    <div data-portal-region="first" class="columns">
+        <div data-th-each="component : ${firstRegion.components}" class="column">
+            <div data-portal-component="${component.path}" data-th-remove="tag" />
+        </div>
+    </div>
+</div>
