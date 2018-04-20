@@ -1,0 +1,8 @@
+<div>
+    <div data-th-each="app : ${apps}" data-th-remove="tag">
+        <div class="head">
+            <span class="headline hl3" data-th-text="${app.displayName + ' ' + app.latestVersion}">Training</span>
+            <p><span class="headline hl4" data-th-text="${app.description}"></span></p>
+        </div>
+    </div>
+</div>
