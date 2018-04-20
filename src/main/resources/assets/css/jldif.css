@@ -90,6 +90,11 @@ img {
 
 
 }
+.column .event {
+    text-align: center;
+    margin-top: -20px;
+    margin-bottom: 40px;
+}
 .column .headline.hl1{
     font-weight: 700;
     font-size: 30px;
